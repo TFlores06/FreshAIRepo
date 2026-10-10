@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FreshAIWebApp\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.gitpod.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitpod.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\CHANGELOG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
@@ -17,6 +29,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FreshAIWebApp\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.nvmrc||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.nvmrc||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FreshAIWebApp\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\setup.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:setup.ps1||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\setup.sh||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:setup.sh||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +62,149 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-10T09:39:53.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": ".gitpod.yml",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.gitpod.yml",
+              "RelativeDocumentMoniker": ".gitpod.yml",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.gitpod.yml",
+              "RelativeToolTip": ".gitpod.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-10-10T08:52:38.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "setup.ps1",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\setup.ps1",
+              "RelativeDocumentMoniker": "setup.ps1",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\setup.ps1",
+              "RelativeToolTip": "setup.ps1",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-10T08:48:04.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAIAAAAAAAAAAABBwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-10-10T08:48:00.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": ".env.example",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\.env.example",
+              "RelativeDocumentMoniker": "FreshAIWebApp\\.env.example",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\.env.example",
+              "RelativeToolTip": "FreshAIWebApp\\.env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-10T08:47:54.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": ".env.example",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.env.example",
+              "RelativeDocumentMoniker": ".env.example",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.env.example",
+              "RelativeToolTip": ".env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-10T08:47:50.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": ".nvmrc",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.nvmrc",
+              "RelativeDocumentMoniker": ".nvmrc",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\.nvmrc",
+              "RelativeToolTip": ".nvmrc",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-10T08:47:46.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\package.json",
               "RelativeDocumentMoniker": "FreshAIWebApp\\package.json",
               "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\package.json",
               "RelativeToolTip": "FreshAIWebApp\\package.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-10-10T08:03:37.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
+              "Title": "setup.sh",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\setup.sh",
+              "RelativeDocumentMoniker": "setup.sh",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\setup.sh",
+              "RelativeToolTip": "setup.sh",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-10T08:48:08.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-10T08:47:13.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "CHANGELOG.md",
               "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\CHANGELOG.md",
               "RelativeDocumentMoniker": "FreshAIWebApp\\CHANGELOG.md",
@@ -56,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "app.js",
               "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\app.js",
               "RelativeDocumentMoniker": "FreshAIWebApp\\app.js",
@@ -68,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "eslint.config.js",
               "DocumentMoniker": "C:\\Users\\tiago\\source\\repos\\TFlores06\\FreshAIRepo\\FreshAIWebApp\\eslint.config.js",
               "RelativeDocumentMoniker": "FreshAIWebApp\\eslint.config.js",
