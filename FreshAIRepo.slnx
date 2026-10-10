@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FreshAIWebApp/FreshAIWebApp.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
