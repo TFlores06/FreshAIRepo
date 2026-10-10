@@ -1,0 +1,97 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.975 0.015 85);
+  --foreground: oklch(0.22 0.03 200);
+  --card: oklch(0.995 0.005 85);
+  --card-foreground: oklch(0.22 0.03 200);
+  --popover: oklch(0.995 0.005 85);
+  --popover-foreground: oklch(0.22 0.03 200);
+  --primary: oklch(0.42 0.09 195);
+  --primary-foreground: oklch(0.99 0.005 85);
+  --secondary: oklch(0.93 0.03 190);
+  --secondary-foreground: oklch(0.28 0.06 195);
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.42 0.03 200);
+  --accent: oklch(0.8 0.15 75);
+  --accent-foreground: oklch(0.22 0.04 60);
+  --destructive: oklch(0.52 0.2 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.5 0.13 150);
+  --border: oklch(0.86 0.02 85);
+  --input: oklch(0.8 0.025 85);
+  --ring: oklch(0.6 0.17 60);
+  --shadow-soft: 0 10px 30px -12px oklch(0.3 0.05 200 / 0.25);
+  --gradient-hero: linear-gradient(180deg, oklch(0.2 0.04 200 / 0.15), oklch(0.18 0.04 200 / 0.85));
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { font-size: 17px; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  :focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; border-radius: 6px; }
+}
+
+@utility btn {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 font-bold transition-colors disabled:opacity-50;
+}
+
+@layer components {
+  .btn-primary { @apply btn bg-primary text-primary-foreground hover:bg-primary/90; }
+  .btn-accent { @apply btn bg-accent text-accent-foreground hover:bg-accent/85; }
+  .btn-ghost { @apply btn border-2 border-border bg-card text-foreground hover:bg-muted; }
+  .btn-icon { @apply btn min-w-11 px-3 border-2 border-border bg-card text-foreground hover:bg-muted; }
+  .btn-icon[aria-pressed="true"] { @apply bg-accent text-accent-foreground border-accent; }
+  .card { @apply rounded-2xl border border-border bg-card text-card-foreground; box-shadow: var(--shadow-soft); }
+  .chip {
+    @apply inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border-2 border-border bg-card px-4 font-semibold transition-colors hover:border-primary;
+  }
+  .chip[aria-pressed="true"], .chip:has(input:checked) { @apply border-primary bg-primary text-primary-foreground; }
+  .tag { @apply inline-flex items-center gap-1 rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-secondary-foreground; }
+  .field {
+    @apply min-h-11 w-full rounded-xl border-2 border-input bg-card px-4 py-2 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none;
+  }
+  .label { @apply mb-1 block font-bold; }
+  .hero-overlay { background: var(--gradient-hero); }
+}
