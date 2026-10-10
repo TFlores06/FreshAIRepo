@@ -23,27 +23,16 @@ npm i
 npm run dev
 ```
 
-Quick start (run both projects)
+Quick start
 
 From the repository root:
 
 ```powershell
-# install all dependencies (root + FreshAIWebApp)
-npm run install:all
+# install dependencies
+npm install
 
-# run root Vite dev server
+# run the dev server
 npm run dev
-
-# or run both concurrently (root app + FreshAIWebApp)
-npm run dev:all
-```
-
-If you only need the smaller FreshAIWebApp project, run:
-
-```powershell
-cd FreshAIWebApp
-npm i
-npm start
 ```
 
 ## Built with

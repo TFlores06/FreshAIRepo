@@ -1,11 +1,9 @@
 image: gitpod/workspace-full
 
 tasks:
-  - init: npm run install:all
-    command: npm run dev:all
+  - init: npm install
+    command: npm run dev
 
 ports:
   - port: 5173
-    onOpen: open-preview
-  - port: 3000
     onOpen: open-preview
