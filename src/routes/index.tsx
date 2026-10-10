@@ -2,7 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { MapPin, Star, ThumbsUp, Volume1, Volume2, VolumeX, Navigation } from "lucide-react";
-import hero from "@/assets/hero.jpg";
+// Use public asset as a fallback for deployments where the local asset may be missing
+const hero = "/assets/hero.svg";
 import { useI18n } from "@/lib/i18n";
 import { FEATURES, PLACES, directionsUrl, type Category, type Feature, type Noise } from "@/lib/places";
 import { reviewsQuery, summarize } from "@/lib/reviews";
