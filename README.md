@@ -1,7 +1,5 @@
 # Welcome to your Lovable project
 
-[![Open in Gitpod](https://img.shields.io/badge/Open%20in-Gitpod-7DBB54?logo=gitpod&logoColor=white)](https://gitpod.io/#https://github.com/TFlores06/FreshAIRepo)
-
 This project was built with [Lovable](https://lovable.dev).
 
 ## Build with Lovable
@@ -20,18 +18,6 @@ Prefer working locally? You need Node.js and npm — [install with nvm](https://
 git clone <this-repository-url>
 cd <repository-name>
 npm i
-npm run dev
-```
-
-Quick start
-
-From the repository root:
-
-```powershell
-# install dependencies
-npm install
-
-# run the dev server
 npm run dev
 ```
 
