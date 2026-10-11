@@ -7,10 +7,12 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/auth")({
   head: () => ({
     meta: [
-      { title: "Sign in — Open Vilnius" },
+      { title: "Sign in — Space4All" },
       { name: "description", content: "Sign in or create an account to review accessible places in Vilnius." },
-      { property: "og:title", content: "Sign in — Open Vilnius" },
-      { property: "og:description", content: "Join Open Vilnius and share accessibility reviews." },
+      { property: "og:title", content: "Sign in — Space4All" },
+      { property: "og:description", content: "Join Space4All and share accessibility reviews." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AuthPage,

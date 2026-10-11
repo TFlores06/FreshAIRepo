@@ -18,10 +18,12 @@ export const Route = createFileRoute("/place/$id")({
   },
   head: ({ loaderData }) => ({
     meta: [
-      { title: `${loaderData?.place.name ?? "Place"} — Open Vilnius` },
+      { title: `${loaderData?.place.name ?? "Place"} — Space4All` },
       { name: "description", content: loaderData?.place.description.en ?? "" },
-      { property: "og:title", content: `${loaderData?.place.name} — Open Vilnius` },
+      { property: "og:title", content: `${loaderData?.place.name} — Space4All` },
       { property: "og:description", content: loaderData?.place.description.en ?? "" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: PlacePage,

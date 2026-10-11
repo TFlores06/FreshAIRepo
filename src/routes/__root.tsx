@@ -15,6 +15,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider } from "@/lib/i18n";
 import { VoiceProvider } from "@/lib/voice";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 function NotFoundComponent() {
   return (
@@ -66,7 +67,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Open Vilnius — Places made for you" },
+      { title: "Space4All — Places made for you" },
       { name: "description", content: "Accessible shops, cafés and public places in Vilnius, reviewed by people with disabilities." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -112,6 +113,7 @@ function RootComponent() {
           <main>
             <Outlet />
           </main>
+          <Footer />
         </VoiceProvider>
       </I18nProvider>
     </QueryClientProvider>

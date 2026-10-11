@@ -2,20 +2,21 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { MapPin, Star, ThumbsUp, Volume1, Volume2, VolumeX, Navigation } from "lucide-react";
-// Use public asset as a fallback for deployments where the local asset may be missing
-const hero = "/assets/hero.svg";
+import hero from "@/assets/hero.jpg";
 import { useI18n } from "@/lib/i18n";
 import { FEATURES, PLACES, directionsUrl, type Category, type Feature, type Noise } from "@/lib/places";
 import { reviewsQuery, summarize } from "@/lib/reviews";
-import { ReadAloud } from "@/components/ReadAloud";
+import { GoogleResults } from "@/components/GoogleResults";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Open Vilnius — Places made for you" },
+      { title: "Space4All — Places made for you" },
       { name: "description", content: "Filter accessible cafés, shops and public places in Vilnius by price, noise level and accessibility." },
-      { property: "og:title", content: "Open Vilnius — Places made for you" },
+      { property: "og:title", content: "Space4All — Places made for you" },
       { property: "og:description", content: "Accessible places in Vilnius, reviewed by people with disabilities." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -62,12 +63,11 @@ function Index() {
         <div className="mx-auto flex min-h-[26rem] max-w-6xl flex-col justify-end gap-4 px-4 py-12 text-primary-foreground">
           <h1 className="text-5xl font-extrabold md:text-7xl">{t.slogan}</h1>
           <p className="max-w-2xl text-lg md:text-xl">{t.heroSub}</p>
-          <ReadAloud targetId="page" />
         </div>
       </section>
 
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 lg:grid-cols-[20rem_1fr]">
-        <aside aria-labelledby="filters-h" className="card h-fit space-y-6 p-5 lg:sticky lg:top-24">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10">
+        <aside aria-labelledby="filters-h" className="space-y-5 border-b border-border pb-6">
           <div className="flex items-center justify-between">
             <h2 id="filters-h" className="text-2xl font-bold">{t.filters}</h2>
             <button type="button" onClick={reset} className="font-bold text-primary underline underline-offset-4">
@@ -75,7 +75,8 @@ function Index() {
             </button>
           </div>
 
-          <div>
+          <div className="grid min-w-0 gap-5 md:grid-cols-2 lg:grid-cols-[1fr_1.2fr_0.8fr]">
+          <div className="min-w-0">
             <label htmlFor="q" className="label">{t.search}</label>
             <input id="q" className="field" value={q} onChange={(e) => setQ(e.target.value)} />
           </div>
@@ -101,6 +102,8 @@ function Index() {
             </select>
           </div>
 
+          </div>
+          <div className="grid min-w-0 gap-5 lg:grid-cols-[1fr_2fr]">
           <fieldset>
             <legend className="label">{t.noise}</legend>
             <div className="flex flex-wrap gap-2">
@@ -117,7 +120,7 @@ function Index() {
 
           <fieldset>
             <legend className="label">{t.features}</legend>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-wrap gap-2">
               {FEATURES.map((f) => (
                 <label key={f} className="chip">
                   <input type="checkbox" className="size-5 accent-current" checked={feats.includes(f)} onChange={() => setFeats(toggle(feats, f))} />
@@ -126,6 +129,7 @@ function Index() {
               ))}
             </div>
           </fieldset>
+          </div>
         </aside>
 
         <section aria-live="polite">
@@ -172,6 +176,7 @@ function Index() {
               );
             })}
           </ul>
+          <GoogleResults query={q} />
         </section>
       </div>
     </div>
