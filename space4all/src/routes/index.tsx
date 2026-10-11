@@ -1,0 +1,184 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
+import { MapPin, Star, ThumbsUp, Volume1, Volume2, VolumeX, Navigation } from "lucide-react";
+import hero from "@/assets/hero.jpg";
+import { useI18n } from "@/lib/i18n";
+import { FEATURES, PLACES, directionsUrl, type Category, type Feature, type Noise } from "@/lib/places";
+import { reviewsQuery, summarize } from "@/lib/reviews";
+import { GoogleResults } from "@/components/GoogleResults";
+
+export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Space4All — Places made for you" },
+      { name: "description", content: "Filter accessible cafés, shops and public places in Vilnius by price, noise level and accessibility." },
+      { property: "og:title", content: "Space4All — Places made for you" },
+      { property: "og:description", content: "Accessible places in Vilnius, reviewed by people with disabilities." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Index,
+});
+
+export const noiseIcon = (n: Noise) => (n === "quiet" ? VolumeX : n === "moderate" ? Volume1 : Volume2);
+
+function Index() {
+  const { t, lang } = useI18n();
+  const { data: reviews = [] } = useQuery(reviewsQuery);
+  const [q, setQ] = useState("");
+  const [cat, setCat] = useState<Category | "all">("all");
+  const [maxPrice, setMaxPrice] = useState<0 | 1 | 2 | 3>(0);
+  const [noise, setNoise] = useState<Noise[]>([]);
+  const [feats, setFeats] = useState<Feature[]>([]);
+
+  const results = useMemo(
+    () =>
+      PLACES.filter(
+        (p) =>
+          (cat === "all" || p.category === cat) &&
+          (!maxPrice || p.price <= maxPrice) &&
+          (!noise.length || noise.includes(p.noise)) &&
+          feats.every((f) => p.features.includes(f)) &&
+          (p.name + p.address).toLowerCase().includes(q.toLowerCase()),
+      ),
+    [q, cat, maxPrice, noise, feats],
+  );
+
+  const toggle = <T,>(arr: T[], v: T) => (arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
+  const reset = () => {
+    setQ("");
+    setCat("all");
+    setMaxPrice(0);
+    setNoise([]);
+    setFeats([]);
+  };
+
+  return (
+    <div id="page">
+      <section className="relative isolate overflow-hidden">
+        <img src={hero} alt="" width={1600} height={912} className="absolute inset-0 -z-10 size-full object-cover" />
+        <div className="hero-overlay absolute inset-0 -z-10" />
+        <div className="mx-auto flex min-h-[26rem] max-w-6xl flex-col justify-end gap-4 px-4 py-12 text-primary-foreground">
+          <h1 className="text-5xl font-extrabold md:text-7xl">{t.slogan}</h1>
+          <p className="max-w-2xl text-lg md:text-xl">{t.heroSub}</p>
+        </div>
+      </section>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10">
+        <aside aria-labelledby="filters-h" className="space-y-5 border-b border-border pb-6">
+          <div className="flex items-center justify-between">
+            <h2 id="filters-h" className="text-2xl font-bold">{t.filters}</h2>
+            <button type="button" onClick={reset} className="font-bold text-primary underline underline-offset-4">
+              {t.reset}
+            </button>
+          </div>
+
+          <div className="grid min-w-0 gap-5 md:grid-cols-2 lg:grid-cols-[1fr_1.2fr_0.8fr]">
+          <div className="min-w-0">
+            <label htmlFor="q" className="label">{t.search}</label>
+            <input id="q" className="field" value={q} onChange={(e) => setQ(e.target.value)} />
+          </div>
+
+          <fieldset>
+            <legend className="label">{t.category}</legend>
+            <div className="flex flex-wrap gap-2">
+              {(["all", "cafe", "shop", "public"] as const).map((c) => (
+                <button key={c} type="button" className="chip" aria-pressed={cat === c} onClick={() => setCat(c)}>
+                  {t[c]}
+                </button>
+              ))}
+            </div>
+          </fieldset>
+
+          <div>
+            <label htmlFor="price" className="label">{t.price}</label>
+            <select id="price" className="field" value={maxPrice} onChange={(e) => setMaxPrice(Number(e.target.value) as 0)}>
+              <option value={0}>{t.priceAny}</option>
+              <option value={1}>{t.price1}</option>
+              <option value={2}>{t.price2}</option>
+              <option value={3}>{t.price3}</option>
+            </select>
+          </div>
+
+          </div>
+          <div className="grid min-w-0 gap-5 lg:grid-cols-[1fr_2fr]">
+          <fieldset>
+            <legend className="label">{t.noise}</legend>
+            <div className="flex flex-wrap gap-2">
+              {(["quiet", "moderate", "loud"] as const).map((n) => {
+                const Icon = noiseIcon(n);
+                return (
+                  <button key={n} type="button" className="chip" aria-pressed={noise.includes(n)} onClick={() => setNoise(toggle(noise, n))}>
+                    <Icon aria-hidden className="size-4" /> {t[n]}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend className="label">{t.features}</legend>
+            <div className="flex flex-wrap gap-2">
+              {FEATURES.map((f) => (
+                <label key={f} className="chip">
+                  <input type="checkbox" className="size-5 accent-current" checked={feats.includes(f)} onChange={() => setFeats(toggle(feats, f))} />
+                  {t[f]}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+          </div>
+        </aside>
+
+        <section aria-live="polite">
+          <p className="mb-4 text-lg font-bold">
+            {results.length} {t.results}
+          </p>
+          {!results.length && <p className="card p-6">{t.noResults}</p>}
+          <ul className="grid gap-5 md:grid-cols-2">
+            {results.map((p) => {
+              const s = summarize(reviews, p.id);
+              const Icon = noiseIcon(p.noise);
+              return (
+                <li key={p.id} className="card flex flex-col gap-3 p-5">
+                  <div className="flex items-start justify-between gap-2">
+                    <span className="tag">{t[p.category]}</span>
+                    <span className="font-bold text-primary" aria-label={t[`price${p.price}`]}>{"€".repeat(p.price)}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold">{p.name}</h3>
+                  <p className="flex items-center gap-1 text-muted-foreground">
+                    <MapPin aria-hidden className="size-4 shrink-0" /> {p.address}
+                  </p>
+                  <p>{p.description[lang]}</p>
+                  <div className="flex flex-wrap gap-2 text-sm">
+                    <span className="tag"><Icon aria-hidden className="size-4" /> {t[p.noise]}</span>
+                    {s.count > 0 && (
+                      <>
+                        <span className="tag"><Star aria-hidden className="size-4" /> {s.avg.toFixed(1)} ({s.count})</span>
+                        <span className="tag"><ThumbsUp aria-hidden className="size-4" /> {s.recPct}% {t.recommended}</span>
+                      </>
+                    )}
+                  </div>
+                  <ul className="flex flex-wrap gap-1 text-sm text-muted-foreground">
+                    {p.features.map((f) => (
+                      <li key={f} className="rounded-full border border-border px-2 py-0.5">{t[f]}</li>
+                    ))}
+                  </ul>
+                  <div className="mt-auto flex flex-wrap gap-2 pt-2">
+                    <Link to="/place/$id" params={{ id: p.id }} className="btn-primary">{t.details}</Link>
+                    <a href={directionsUrl(p)} target="_blank" rel="noreferrer" className="btn-ghost">
+                      <Navigation aria-hidden className="size-4" /> {t.directions}
+                    </a>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+          <GoogleResults query={q} />
+        </section>
+      </div>
+    </div>
+  );
+}
