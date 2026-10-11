@@ -1,0 +1,6 @@
+﻿#!/usr/bin/env bash
+set -euo pipefail
+echo "Installing dependencies for root and FreshAIWebApp"
+npm install
+npm --prefix FreshAIWebApp install
+echo "Setup complete. Run 'npm run dev' or 'npm run dev:all' to start servers."

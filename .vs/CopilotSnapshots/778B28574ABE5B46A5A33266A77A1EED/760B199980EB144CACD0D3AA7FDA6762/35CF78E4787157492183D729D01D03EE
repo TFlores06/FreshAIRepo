@@ -1,0 +1,2 @@
+﻿# Example env for the small FreshAIWebApp (copy to .env if needed)
+PORT=3000
